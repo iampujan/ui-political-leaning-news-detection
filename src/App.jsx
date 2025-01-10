@@ -50,7 +50,6 @@ const App = () => {
     setSelectedOutlet(outlet);
 
     try {
-      // const response = await axios.get(process.env.API_URL + "/outlets");
       const response = await axios.get(`${API_URL}/outlets/${outlet}`);
       setNewsDetails(response.data);
     } catch (error) {
@@ -62,9 +61,7 @@ const App = () => {
   useEffect(() => {
     const fetchOutlets = async () => {
       try {
-        // get url from .env file
         const response = await axios.get(`${API_URL}/outlets`);
-        // const response = await axios.get("http://localhost:8000/outlets");
         setOutlets(response.data);
       } catch (err) {
         setError(err);
