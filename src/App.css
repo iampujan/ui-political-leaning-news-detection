@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.sidebar {
+  background-color: #f9f9fc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: rgb(33, 30, 30);
+  width: 700px;
+  padding: 2rem;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.app {
+  text-align: center;
+}
+
+.app-header {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+}
+
+.app-main {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side {
+  width: 20%;
+  padding: 10px;
+}
+
+.news-section {
+  margin: 0 auto;
+  flex: 1;
+  max-width: 700px;
+  min-width: 500px;
+}
+
+.input-section,
+.result-section {
+  background: white;
+  margin: 20px;
+  width: 80%;
+  display: block;
+  text-align: left;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-section input,
+.input-section textarea {
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 80%;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.button-secondary {
+  background-color: #8e9195;
+  color: #fff;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+select {
+  display: block;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 80%;
+}
+
+select option {
+  font-size: 16px;
+  padding: 5px;
+}
