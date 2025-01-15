@@ -14,6 +14,7 @@ const App = () => {
   const [content, setContent] = useState("");
   const [prediction, setPrediction] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [selectedModel, setSelectedModel] = useState(""); // State for selected model
   const [outlets, setOutlets] = useState([]);
   const [selectedOutlet, setSelectedOutlet] = useState("");
   const [newsDetails, setNewsDetails] = useState([]);
@@ -32,12 +33,13 @@ const App = () => {
       const response = await axios.post(`${API_URL}/predict`, {
         title,
         content,
+        model_name: selectedModel, // Ensure this matches your backend
       });
       setPrediction(response.data);
     } catch (error) {
       alert(
         "Error during prediction: " +
-          (error.response?.data?.detail || error.message)
+          (error.response?.data?.detail || error.message || "Unknown error")
       );
       setPrediction(null);
     } finally {
@@ -176,12 +178,40 @@ const App = () => {
               onChange={(e) => setContent(e.target.value)}
             ></textarea>
 
+            <div>
+              <label>Select Model: </label>
+              <select
+                value={selectedModel}
+                onChange={(e) => setSelectedModel(e.target.value)}
+              >
+                <option value="">-- Select a Model --</option>
+                <option value="model">BERT Finetuning</option>
+                <option value="quantized_model">Quantized Model</option>
+                <option value="lora_model">LORA</option>
+              </select>
+            </div>
             <div className="button-group">
+              <button
+                onClick={handlePredict}
+                disabled={!selectedModel || loading || !canPredict}
+              >
+                {loading ? "Predicting..." : "Detect"}
+              </button>
+              <button
+                onClick={() => {
+                  setPrediction(null);
+                  handleReset();
+                }}
+              >
+                Reset
+              </button>
+            </div>
+            {/* <div className="button-group">
               <button onClick={handlePredict} disabled={!canPredict}>
                 {loading ? "Predicting..." : "Detect"}
               </button>
               <button onClick={handleReset}>Reset</button>
-            </div>
+            </div> */}
           </div>
 
           {prediction && (
