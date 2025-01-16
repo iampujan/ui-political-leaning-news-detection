@@ -1,36 +1,37 @@
-## Available Scripts
+# Political Leaning Detection in News Headlines
+This project aims to analyze political bias in mainstream media by classifying news articles from various outlets as right-leaning, centrist, or left-leaning. The goal is to assess potential biases within these news sources and provide insights into their political orientations. The implementation leverages transformers for sequence classification, alongside tools for preprocessing, training, and evaluating machine learning models.
 
-In the project directory, you can run:
+## Possible Use Cases
+### Helping people understand news bias
+- Classifies news articles to show if they lean left, right, or center, and 
+- Aims to help readers make informed choices by identifying bias in news sources
 
-### `npm start`
+### Supporting NGOs and journalists with media monitoring
+- Monitors bias trends on specific issues, helping ensure balanced reporting
+- Useful for detecting potential misinformation or slanted perspectives
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Assisting academic research
+- Useful for researchers studying media bias, journalism, or political influence in the news
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## The Dataset
+Released on 15 July 2020, the POLUSA dataset contains 0.9 million political news articles, carefully balanced across different periods and news outlet popularity. It provides a valuable resource for analyzing political trends and biases in media. The dataset is available for download on Zenodo.org.
 
-### `npm test`
+Link: https://zenodo.org/records/3946057/files/polusa_balanced.zip?download=1
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
+Follow these steps to set up the project:
 
-### `npm run build`
+### Clone the repository
+```bash
+git clone https://github.com/iampujan/ui-political-leaning-news-detection.git
+cd your-repository
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend (React)
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contact
+For any questions or clarifications, please contact Raza Mehar at [raza.mehar@gmail.com], Pujan Thapa at [iampujan@outlook.com] or Syed Najam Mehdi at [najam.electrical.ned@gmail.com].
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
