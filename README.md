@@ -33,5 +33,5 @@ npm start
 ```
 
 ## Contact
-For any questions or clarifications, please contact Raza Mehar at [raza.mehar@gmail.com], Pujan Thapa at [iampujan@outlook.com] or Syed Najam Mehdi at [najam.electrical.ned@gmail.com].
+For any questions or clarifications, please contact Syed Najam Mehdi at [najam.electrical.ned@gmail.com], Raza Mehar at [raza.mehar@gmail.com] and Pujan Thapa at [iampujan@outlook.com].
 
